@@ -1,0 +1,180 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebebeb;
+    color: #000000;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0 10px 0;
+    color: rgb(0, 0, 0);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 20px 0 5px 0;
+    font-size: 1.8em;
+    text-decoration: underline solid #000000;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 7%;
+    padding-bottom: 40px;
+}
+
+.toggle {
+    margin: 2px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.toggle span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.toggle .toggler {
+    height: 30px;
+    width: 80px;
+    border-radius: 50px;
+    background-color: #8240de;
+    cursor: pointer;
+    position: relative;
+    margin: 0 10px;
+}
+
+.toggle .toggler::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s;
+    transition: 0.3s ease-out;
+    /* transition: transform 0.3s; */
+}
+
+.toggle .toggler.active::before {
+    left: 53px;
+    /* transform: translateX(48px); */
+}
+
+.toggle .toggler1 {
+    height: 30px;
+    width: 80px;
+    border-radius: 50px;
+    background-color: #8240de;
+    cursor: pointer;
+    position: relative;
+    margin: 0 10px;
+}
+
+.toggle .toggler1::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.3s ease-out;
+}
+
+.toggle .toggler1.active::before {
+    left: 53px;
+}
+
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.plan:hover{
+    transform: scale(1.1) ;
+}
+
+.plan h2 {
+    margin-top: 0;
+}
+
+.plan .price {
+    font-size: 2em;
+    margin: 10px 0 5px 0;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.plan ul li:last-child {
+    border-bottom: none;
+}
+
+.plan button {
+    background-color: #8240de;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.plan button:hover {
+    background-color: #691dd3;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;
+    }
+}
